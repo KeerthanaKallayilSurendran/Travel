@@ -1,0 +1,133 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* variables */
+:root{
+    --FCOLOR : #1A2238;
+    --BTCOLOR : #F4DB7D;
+    --AFCOLOR : #00A9D8;
+    --HOVER : #259B9A;
+    --LIGHT : #fff;
+}
+/* General */
+body{
+    font-family: 'Tilt Neon', cursive;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header{
+    position: relative;
+    top:0;
+    min-height: 100vh;
+    background-color: #1A2238;
+    background-image: url(../images/Wallpaper-Slider1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.top-header-nav{
+    width: 100%;
+    height: 75px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-header-nav .logo h1 {
+    color: var(--LIGHT);
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.top-header-nav .nav-bar ul{
+    display: flex;
+    padding-top: 10px;
+    padding-right: 50px;
+    gap : 40px;
+}
+.top-header-nav .nav-bar ul,li{
+    list-style: none;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: var(--LIGHT);
+    font-size: 18px;
+    transition: .3s ease;
+}
+
+.nav-bar a:hover{
+    transform: scale(1.1);
+    color: var(--AFCOLOR);
+}
+
+.home-content{
+    margin-left: 75px;
+    margin-top: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: hsla(0, 0%, 0%, 0.164);
+    padding: 10px;
+}
+
+.home-content:hover{
+    transform: translateY(-15px);
+    background-color: hsla(0, 0%, 35%, 0.164);;
+}
+
+.quote{
+    height: auto;
+    width: 45%;
+    color: var(--LIGHT);
+    line-height: 45px;
+    margin-bottom: 15px;
+}
+
+.home-content p{
+    color: var(--LIGHT);
+    text-align: justify;
+    line-height: 25px;
+}
+
+
+.letgo{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.letgo button{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--BTCOLOR);
+    font-size: 15px;
+    font-weight: bold;
+    color: #1A2238;
+}
+
+.letgo button:hover{
+    transform: scale(1.1);
+    background-color: var(--LIGHT);
+}
+
+
+
+
+
