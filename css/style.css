@@ -19,51 +19,40 @@
 /* General */
 body{
     font-family: 'Tilt Neon', cursive;
-    min-height: 100vh;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.section-head{
+    width: 50%;
+    font-size: 18px;
+    color: var(--FCOLOR);
 }
 
+/* Navbar */
 .header{
-    position: relative;
-    top:0;
-    min-height: 100vh;
-    background-color: #1A2238;
-    background-image: url(../images/Wallpaper-Slider1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-
-.top-header-nav{
+    position: sticky;
+    top: 0;
     width: 100%;
-    height: 75px;
-    background: transparent;
+    height: 50px;
+    background-color: #1f2942 ;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
 }
-
-.top-header-nav .logo h1 {
+.logo h1 {
     color: var(--LIGHT);
     font-size: 25px;
     padding-left: 20px;
     padding-top: 10px;
 }
-.top-header-nav .nav-bar ul{
+.nav-bar ul{
     display: flex;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-right: 50px;
     gap : 40px;
 }
-.top-header-nav .nav-bar ul,li{
+.nav-bar ul,li{
     list-style: none;
 }
-
 .nav-bar a{
     text-decoration: none;
     color: var(--LIGHT);
@@ -76,28 +65,70 @@ body{
     color: var(--AFCOLOR);
 }
 
+/* Home Section */
+.home{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #1A2238;
+    background-image: url(../images/Wallpaper-Slider2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: bgchange 25s ease infinite;
+    
+}
+
+@keyframes bgchange {
+    0%{
+        background-image: url(../images/Wallpaper-Slider1.jpg);
+    }
+    20%{
+        background-image: url(../images/Wallpaper-Slider2.jpg);
+    }
+    40%{
+        background-image: url(../images/Wallpaper-Slider3.jpg);
+    }
+    60%{
+        background-image: url(../images/Wallpaper-Slider4.jpg);
+    }
+    80%{
+        background-image: url(../images/Wallpaper-Slider5.jpg);
+    }
+    100%{
+        background-image: url(../images/Wallpaper-Slider6.jpg);
+    }
+}
+
+
 .home-content{
     margin-left: 75px;
-    margin-top: 100px;
-    width: 50%;
+    margin-top: 100px; 
+    width: 25%; 
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: space-around;
-    background-color: hsla(0, 0%, 0%, 0.164);
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.589);
     padding: 10px;
+    border-radius: 10px;
 }
 
 .home-content:hover{
     transform: translateY(-15px);
-    background-color: hsla(0, 0%, 35%, 0.164);;
 }
 
 .quote{
     height: auto;
-    width: 45%;
+    width: 100%;
     color: var(--LIGHT);
     line-height: 45px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .home-content p{
@@ -116,18 +147,191 @@ body{
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color: var(--BTCOLOR);
+    background-color: var(--FCOLOR);
     font-size: 15px;
     font-weight: bold;
-    color: #1A2238;
+    color: var(--LIGHT);
 }
 
 .letgo button:hover{
-    transform: scale(1.1);
     background-color: var(--LIGHT);
+    color: var(--FCOLOR);
 }
 
 
 
 
+
+/* Service */
+.service-section{
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.service-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 70%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service{
+    margin-top: 25px;
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 5px #00000027;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    box-shadow: 2px 2px 2px #1a223867;
+}
+
+.service-name{
+    font-size: 18px;
+    color: var(--FCOLOR);
+    font-weight: bold;
+}
+
+.service-prop{
+    font-size: 12px;    
+    color: var(--FCOLOR);
+}
+
+/* Tour Package */
+
+.packages-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.packages-section .section-head{
+    text-align: center;
+}
+.picture-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.places{
+    margin-top: 25px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 250px;
+    height: 350px;
+    border: none;
+    border-radius: 10px;
+    transition: 1.5s;
+}
+.packages-section img:hover{
+    transform: scale(1.1);                            
+}
+.img{
+    position: relative;
+}
+.img h3{
+    position: absolute;
+    top:5px;
+    right: 12px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    height: 25px;
+    width: 80px;
+    padding: 2px;
+    background-color: hsla(0, 9%, 75%, 0.192);
+    color: var(--FCOLOR);
+}
+
+.placerating{
+    display: flex;
+    gap: 20px;
+}
+
+h4, i{
+    color: var(--FCOLOR);
+}
+
+
+/* Popular Destination */
+
+.destination-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.destination{
+    margin-top: 25px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.destination .img{
+    position: relative;
+}
+.destination .img:hover .img-hover{
+    visibility: visible;
+}
+.img .img-hover{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 220px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a22388e;
+    color: var(--LIGHT);
+    padding: 15px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.img-hover h2{
+    font-size: 25px
+}
+
+.img-hover p{
+    font-size: 18px;
+    text-align: justify;
+
+}
 
